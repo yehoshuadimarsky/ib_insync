@@ -1,14 +1,13 @@
+import asyncio
 import datetime
 import logging
 import math
-import sys
 import signal
-import asyncio
+import sys
 import time
-from typing import Iterator, AsyncIterator, Callable, Union
+from typing import AsyncIterator, Callable, Iterator, Union
 
 import eventkit as ev
-
 
 globalErrorEvent = ev.Event()
 """

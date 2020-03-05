@@ -1,42 +1,41 @@
 # flake8: noqa
 
 import sys
-if sys.version_info < (3, 6, 0):
-    raise RuntimeError('ib_insync requires Python 3.6 or higher')
 
 from eventkit import Event
 
-from .version import __version__, __version_info__
-from .objects import (
-    Object, ContractDetails, ContractDescription,
-    ComboLeg, DeltaNeutralContract, OrderComboLeg, OrderState,
-    SoftDollarTier, PriceIncrement, Execution, CommissionReport,
-    BarList, BarDataList, RealTimeBarList, BarData, RealTimeBar,
-    HistogramData, NewsProvider, DepthMktDataDescription,
-    ScannerSubscription, ScanData, ScanDataList,
-    ExecutionFilter, PnL, PnLSingle, AccountValue, TickData,
-    TickByTickAllLast, TickByTickBidAsk, TickByTickMidPoint,
-    HistoricalTick, HistoricalTickBidAsk, HistoricalTickLast,
-    TickAttrib, TickAttribBidAsk, TickAttribLast, FundamentalRatios,
-    MktDepthData, DOMLevel, BracketOrder, TradeLogEntry, TagValue,
-    FamilyCode, SmartComponent,
-    PortfolioItem, Position, Fill, OptionComputation, OptionChain, Dividends,
-    NewsArticle, HistoricalNews, NewsTick, NewsBulletin, ConnectionStats)
-from .contract import (
-    Contract, Stock, Option, Future, ContFuture, Forex, Index, CFD,
-    Commodity, Bond, FuturesOption, MutualFund, Warrant, Bag)
-from .order import (
-    Trade, OrderStatus, Order, LimitOrder, MarketOrder,
-    StopOrder, StopLimitOrder,
-    OrderCondition, ExecutionCondition, MarginCondition,
-    TimeCondition, PriceCondition, PercentChangeCondition,
-    VolumeCondition)
-from .ticker import Ticker
-from .ib import IB
 from .client import Client
-from .wrapper import Wrapper
-from .flexreport import FlexReport, FlexError
+from .contract import (
+    CFD, Bag, Bond, Commodity, ContFuture, Contract, Forex, Future,
+    FuturesOption, Index, MutualFund, Option, Stock, Warrant)
+from .flexreport import FlexError, FlexReport
+from .ib import IB
 from .ibcontroller import IBC, IBController, Watchdog
+from .objects import (
+    AccountValue, BarData, BarDataList, BarList, BracketOrder, ComboLeg,
+    CommissionReport, ConnectionStats, ContractDescription, ContractDetails,
+    DeltaNeutralContract, DepthMktDataDescription, Dividends, DOMLevel,
+    Execution, ExecutionFilter, FamilyCode, Fill, FundamentalRatios,
+    HistogramData, HistoricalNews, HistoricalTick, HistoricalTickBidAsk,
+    HistoricalTickLast, MktDepthData, NewsArticle, NewsBulletin, NewsProvider,
+    NewsTick, Object, OptionChain, OptionComputation, OrderComboLeg,
+    OrderState, PnL, PnLSingle, PortfolioItem, Position, PriceIncrement,
+    RealTimeBar, RealTimeBarList, ScanData, ScanDataList, ScannerSubscription,
+    SmartComponent, SoftDollarTier, TagValue, TickAttrib, TickAttribBidAsk,
+    TickAttribLast, TickByTickAllLast, TickByTickBidAsk, TickByTickMidPoint,
+    TickData, TradeLogEntry)
+from .order import (ExecutionCondition, LimitOrder, MarginCondition,
+                    MarketOrder, Order, OrderCondition, OrderStatus,
+                    PercentChangeCondition, PriceCondition, StopLimitOrder,
+                    StopOrder, TimeCondition, Trade, VolumeCondition)
+from .ticker import Ticker
+from .version import __version__, __version_info__
+from .wrapper import Wrapper
+
+if sys.version_info < (3, 6, 0):
+    raise RuntimeError('ib_insync requires Python 3.6 or higher')
+
+
 
 __all__ = ['util', 'Event']
 for _m in (

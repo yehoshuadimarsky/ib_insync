@@ -1,18 +1,18 @@
-import struct
 import asyncio
-import logging
-import time
 import io
+import logging
+import struct
+import time
 from collections import deque
 from typing import List
 
 from eventkit import Event
 
-from .contract import Contract
 from .connection import Connection
+from .contract import Contract
 from .decoder import Decoder
 from .objects import ConnectionStats
-from .util import run, UNSET_INTEGER, UNSET_DOUBLE
+from .util import UNSET_DOUBLE, UNSET_INTEGER, run
 
 __all__ = ['Client']
 

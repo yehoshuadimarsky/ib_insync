@@ -1,6 +1,7 @@
+import codecs
 import os
 import sys
-import codecs
+
 from setuptools import setup
 
 if sys.version_info < (3, 6, 0):

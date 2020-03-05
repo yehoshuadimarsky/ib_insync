@@ -1,20 +1,24 @@
 import asyncio
-import logging
 import datetime
+import logging
 from collections import defaultdict
 from contextlib import suppress
 
-from ib_insync.contract import Contract
-from ib_insync.ticker import Ticker
-from ib_insync.order import Order, OrderStatus, Trade
-from ib_insync.objects import (
-    AccountValue, PortfolioItem, Position, TradeLogEntry, PriceIncrement,
-    OptionChain, Fill, CommissionReport, RealTimeBar, Dividends,
-    NewsTick, NewsArticle, NewsBulletin, NewsProvider, HistoricalNews,
-    TickData, HistoricalTick, HistoricalTickBidAsk, HistoricalTickLast,
-    TickByTickAllLast, TickByTickBidAsk, TickByTickMidPoint, FundamentalRatios,
-    MktDepthData, DOMLevel, OptionComputation, ScanData, HistogramData)
 import ib_insync.util as util
+from ib_insync.contract import Contract
+from ib_insync.objects import (AccountValue, CommissionReport, Dividends,
+                               DOMLevel, Fill, FundamentalRatios,
+                               HistogramData, HistoricalNews, HistoricalTick,
+                               HistoricalTickBidAsk, HistoricalTickLast,
+                               MktDepthData, NewsArticle, NewsBulletin,
+                               NewsProvider, NewsTick, OptionChain,
+                               OptionComputation, PortfolioItem, Position,
+                               PriceIncrement, RealTimeBar, ScanData,
+                               TickByTickAllLast, TickByTickBidAsk,
+                               TickByTickMidPoint, TickData, TradeLogEntry)
+from ib_insync.order import Order, OrderStatus, Trade
+from ib_insync.ticker import Ticker
+
 from .util import UNSET_DOUBLE, UNSET_INTEGER
 
 __all__ = ['Wrapper']

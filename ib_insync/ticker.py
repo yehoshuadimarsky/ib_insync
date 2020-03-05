@@ -1,6 +1,6 @@
 from eventkit import Event, Op
 
-from ib_insync.objects import Object, BarList
+from ib_insync.objects import BarList, Object
 from ib_insync.util import isNan
 
 __all__ = ['Ticker']

@@ -1,26 +1,25 @@
 import asyncio
-import logging
 import datetime
+import logging
 import time
 from contextlib import suppress
-from typing import List, Iterator, Awaitable, Union
+from typing import Awaitable, Iterator, List, Union
 
 from eventkit import Event
 
 import ib_insync.util as util
 from ib_insync.client import Client
-from ib_insync.wrapper import Wrapper
 from ib_insync.contract import Contract
-from ib_insync.ticker import Ticker
-from ib_insync.order import Order, OrderStatus, Trade, LimitOrder, StopOrder
 from ib_insync.objects import (
-    BarList, BarDataList, RealTimeBarList,
-    AccountValue, PortfolioItem, Position, Fill, Execution, BracketOrder,
-    TradeLogEntry, OrderState, ExecutionFilter, TagValue, PnL, PnLSingle,
-    ContractDetails, ContractDescription, OptionChain, OptionComputation,
-    NewsTick, NewsBulletin, NewsArticle, NewsProvider, HistoricalNews,
-    ScannerSubscription, ScanDataList, HistogramData, PriceIncrement,
-    DepthMktDataDescription)
+    AccountValue, BarDataList, BarList, BracketOrder, ContractDescription,
+    ContractDetails, DepthMktDataDescription, Execution, ExecutionFilter, Fill,
+    HistogramData, HistoricalNews, NewsArticle, NewsBulletin, NewsProvider,
+    NewsTick, OptionChain, OptionComputation, OrderState, PnL, PnLSingle,
+    PortfolioItem, Position, PriceIncrement, RealTimeBarList, ScanDataList,
+    ScannerSubscription, TagValue, TradeLogEntry)
+from ib_insync.order import LimitOrder, Order, OrderStatus, StopOrder, Trade
+from ib_insync.ticker import Ticker
+from ib_insync.wrapper import Wrapper
 
 __all__ = ['IB']
 

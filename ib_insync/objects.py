@@ -1,8 +1,8 @@
 from collections import namedtuple
 
-from .util import UNSET_DOUBLE, UNSET_INTEGER
-
 from eventkit import Event
+
+from .util import UNSET_DOUBLE, UNSET_INTEGER
 
 __all__ = (
     'Object ContractDetails ContractDescription '

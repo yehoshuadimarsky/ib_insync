@@ -1,14 +1,13 @@
 import logging
 
 from .contract import Contract
-from .order import Order, OrderCondition
 from .objects import (
-    ContractDetails, ContractDescription, ComboLeg, OrderComboLeg,
-    OrderState, TagValue, Execution, CommissionReport,
-    BarData, DeltaNeutralContract, SoftDollarTier, FamilyCode,
-    SmartComponent, DepthMktDataDescription, NewsProvider,
-    TickAttribBidAsk, TickAttribLast, HistogramData, PriceIncrement,
-    HistoricalTick, HistoricalTickBidAsk, HistoricalTickLast)
+    BarData, ComboLeg, CommissionReport, ContractDescription, ContractDetails,
+    DeltaNeutralContract, DepthMktDataDescription, Execution, FamilyCode,
+    HistogramData, HistoricalTick, HistoricalTickBidAsk, HistoricalTickLast,
+    NewsProvider, OrderComboLeg, OrderState, PriceIncrement, SmartComponent,
+    SoftDollarTier, TagValue, TickAttribBidAsk, TickAttribLast)
+from .order import Order, OrderCondition
 from .util import UNSET_DOUBLE
 
 __all__ = ['Decoder']
